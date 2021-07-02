@@ -9,12 +9,12 @@ import { VehicleFacade } from '../store/vehicle/vehicle.facade';
 export class MainComponent {
   public vehicle$ = this.vehicleFacade.vehicle$;
   public loading$ = this.vehicleFacade.loading$;
-  displayedColumns: string[] = ['Make_ID' , 'Make_Name', 'Model_ID', 'Model_Name'];
-  carList = ['honda', 'bmw', 'mazda', 'volvo'];
-  selectedCar = null;
+  public displayedColumns: string[] = ['Make_ID' , 'Make_Name', 'Model_ID', 'Model_Name'];
+  public carList = ['honda', 'bmw', 'mazda', 'volvo'];
+  public selectedCar = null;
   constructor(private vehicleFacade: VehicleFacade) { }
 
-  getCars(): void {
+  public getCars(): void {
     this.vehicleFacade.getVehicle(this.selectedCar);
   }
 }
